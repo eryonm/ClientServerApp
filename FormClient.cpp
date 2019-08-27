@@ -25,7 +25,7 @@ int main()
 	return 0;
 }
 
-
+// in this function nothing special
 void FormClient::FormClient::MakeClient()
 {
 
@@ -80,6 +80,7 @@ void FormClient::FormClient::MakeClient()
 	//throw gcnew System::NotImplementedException();
 }
 
+// for using this function i used threading
 void FormClient::ReadDataClient()
 {
 
@@ -105,7 +106,7 @@ void FormClient::ReadDataClient()
 
 void FormClient::SendMsgToServer()
 {
-	marshal_context context;
+	marshal_context context; // using marshal to convert, cause “send()” gets char
 
 	std::string msg_client = context.marshal_as<std::string>(tb1Client->Text);
 	System::String ^message_client = marshal_as<String^>(msg_client);
