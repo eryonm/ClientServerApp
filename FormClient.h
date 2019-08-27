@@ -24,7 +24,7 @@ namespace socketsclient{
 
 	
 	/// <summary>
-	/// Сводка для FormClient
+	/// Г‘ГўГ®Г¤ГЄГ  Г¤Г«Гї FormClient
 	/// </summary>
 	public ref class FormClient : public System::Windows::Forms::Form
 	{
@@ -33,7 +33,7 @@ namespace socketsclient{
 		{
 			InitializeComponent();
 			//
-			//TODO: добавьте код конструктора
+			//TODO: Г¤Г®ГЎГ ГўГјГІГҐ ГЄГ®Г¤ ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г°Г 
 			//
 		}
 
@@ -45,7 +45,7 @@ namespace socketsclient{
 	
 		void SendMsgToServer();
 	
-
+              // this function sets time 
 		void SetDateTime()
 		{
 			DateTimeOffset dto_client;
@@ -55,7 +55,7 @@ namespace socketsclient{
 		}
 	protected:
 		/// <summary>
-		/// Освободить все используемые ресурсы.
+		/// ГЋГ±ГўГ®ГЎГ®Г¤ГЁГІГј ГўГ±ГҐ ГЁГ±ГЇГ®Г«ГјГ§ГіГҐГ¬Г»ГҐ Г°ГҐГ±ГіГ°Г±Г».
 		/// </summary>
 		~FormClient()
 		{
@@ -93,14 +93,14 @@ namespace socketsclient{
 
 	private:
 		/// <summary>
-		/// Обязательная переменная конструктора.
+		/// ГЋГЎГїГ§Г ГІГҐГ«ГјГ­Г Гї ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г Гї ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г°Г .
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
+		/// Г’Г°ГҐГЎГіГҐГ¬Г»Г© Г¬ГҐГІГ®Г¤ Г¤Г«Гї ГЇГ®Г¤Г¤ГҐГ°Г¦ГЄГЁ ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г°Г  вЂ” Г­ГҐ ГЁГ§Г¬ГҐГ­ГїГ©ГІГҐ 
+		/// Г±Г®Г¤ГҐГ°Г¦ГЁГ¬Г®ГҐ ГЅГІГ®ГЈГ® Г¬ГҐГІГ®Г¤Г  Г± ГЇГ®Г¬Г®Г№ГјГѕ Г°ГҐГ¤Г ГЄГІГ®Г°Г  ГЄГ®Г¤Г .
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -234,7 +234,7 @@ namespace socketsclient{
 		socketsclient::failureC = send(socketsclient::serversocket, client_msg_disconnect.c_str(), 512, 0);
 		if (socketsclient::failureC < 0)
 		{
-			System::Windows::Forms::MessageBox::Show("Произошла ошибка WSAGetLastError: " +
+			System::Windows::Forms::MessageBox::Show("ГЏГ°Г®ГЁГ§Г®ГёГ«Г  Г®ГёГЁГЎГЄГ  WSAGetLastError: " +
 				WSAGetLastError().ToString());
 			closesocket(socketsclient::clientsocket);
 			WSACleanup();
@@ -257,7 +257,7 @@ private: System::Void sendmsg_client_Click(System::Object^  sender, System::Even
 
 		 private: System::Void textBox1_KeyUp(System::Object^  sender, System::Windows::Forms::KeyEventArgs^  e) {
 
-			 if (e->KeyCode == Keys::Enter)
+			 if (e->KeyCode == Keys::Enter) // new event to catch вЂњenterвЂќ 
 			 {
 				 sendmsg_client_Click(sender, e);
 			 }
